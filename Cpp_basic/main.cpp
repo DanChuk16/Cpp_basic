@@ -1,19 +1,12 @@
 #include <iostream>
-#include <string>
-
 using namespace std;
 
 int main()
 {
-    string name = "The war and the peace";
-    string author = "L.N. Tolstoj";
-    string publisher = "Piter";
-    int pages = 500;
-
-    cout << "Name       : \"" << name << "\"" << endl;
-    cout << "Avtor      : " << author << endl;
-    cout << "Izdatelstvo: " << publisher << endl;
-    cout << "Pages      : " << pages << "." << endl;
-
+    int year, days;
+    cout << "Enter the year: ";
+    cin >> year;
+    days = 365 + ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0);
+    cout << "In " << year << " year = " << days << " days\n";
     return 0;
 }
